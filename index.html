@@ -2,79 +2,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Claim Your Bonus</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('assets/bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
-    }
-    .container {
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 50px auto;
-      max-width: 500px;
-      border-radius: 15px;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    .button {
-      display: block;
-      background-color: #ffcc00;
-      color: black;
-      padding: 15px;
-      margin: 10px auto;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      max-width: 300px;
-    }
-    .button:hover {
-      background-color: #ffaa00;
-    }
-    .small {
-      font-size: 0.9em;
-      margin-top: 20px;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Bonus Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+            color: #fff;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+        h1, h2 {
+            color: #ffcc00;
+            text-align: center;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .lang-section {
+            margin-top: 20px;
+        }
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            display: block;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .stake {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .fortuna {
+            background-color: #f44336;
+            color: #fff;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .info-box {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💸 Choose Your Bonus and Start Winning!</h1>
+
+        <div class="info-box">
+            <h2>✅ How to Get Your Bonus</h2>
+            <ol>
+                <li>Click the casino button below</li>
+                <li>Register an account</li>
+                <li>Make a deposit and claim your bonus</li>
+            </ol>
+        </div>
+
+        <div class="info-box">
+            <h2>🚀 Don’t Miss Out</h2>
+            <p>Bonus up to $500 + Free Spins!</p>
+            <p>Slots, Sports & Poker — Play Your Way.</p>
+            <p>Take the first step 👇</p>
+        </div>
+
+        <div class="info-box">
+            <h2>🧩 No Crypto?</h2>
+            <p>No problem — find out how to deposit with a card 💳</p>
+            <a href="#" class="btn" style="background:#2196F3;">How to Deposit?</a>
+        </div>
+
+        
+<div class="info-box">
+    <h2>⏳ Limited Time Offer!</h2>
+    <p>Hurry up! Bonuses are available only for a short time.</p>
+    <p><strong>Time Left:</strong></p>
+    <div id="countdown" style="font-size: 22px; color: #ffcc00; margin-top: 10px;"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var countDownDate = new Date("2025-07-11T22:45:25.510118Z").getTime();
+    var countdown = document.getElementById("countdown");
+
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        if (distance < 0) {
+            clearInterval(x);
+            countdown.innerHTML = "EXPIRED";
+            return;
+        }
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdown.innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+    }, 1000);
+});
+</script>
+<div class="btn-group">
+            <a href="https://stake.com/?c=c16bac6b4c" class="btn stake">🔵 Play on Stake</a>
+            <a href="https://fortuna-promo.com/alt/pf_wheel_of_fortune_ladies_ru/?3a83a38175facdf799b1d0c9beebcac5" class="btn fortuna">🔴 Play on PlayFortuna</a>
+        </div>
+
+        <div class="footer">
+            ⓒ 2025 Promo Landing Page — Stake & PlayFortuna
+        </div>
+    </div>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(103189463, "init", {
+    ym(103189463, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
         webvisor:true
-   });
+    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/103189463" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-</head>
-<body>
-  <div class="container">
-    <h1>🎁 Получи бонус прямо сейчас!</h1>
-    <p>Выбери платформу и начни выигрывать уже сегодня!</p>
-    <a class="button" href="https://stake.com/?c=c16bac6b4c" target="_blank">👉 Перейти в Stake</a>
-    <a class="button" href="https://fortuna-promo.com/alt/pf_wheel_of_fortune_ladies_ru/?3a83a38175facdf799b1d0c9beebcac5" target="_blank">🎰 Играть в PlayFortuna</a>
-    <a class="button" href="https://booi-promo.com/alt/booi_new_wheel_ru/?6270256cdfbd09ddee53f401b1abdc3b" target="_blank">💎 Крутить в Booi</a>
-    <p class="small">Нет крипты? 👉 <a href="https://www.bybit.com/invite?ref=ZY974Q" style="color: #ffcc00;">Купить на Bybit</a> или <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_005FXA4OM1" style="color: #ffcc00;">Binance</a></p>
-  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const stakeBtn = document.querySelector(".btn.stake");
+    const fortunaBtn = document.querySelector(".btn.fortuna");
+    const howToDepositBtn = document.querySelector("a[href='#']");
+
+    if (stakeBtn) {
+        stakeBtn.addEventListener("click", function () {
+            ym(103189463, 'reachGoal', 'click_stake');
+        });
+    }
+
+    if (fortunaBtn) {
+        fortunaBtn.addEventListener("click", function () {
+            ym(103189463, 'reachGoal', 'click_fortuna');
+        });
+    }
+
+    if (howToDepositBtn) {
+        howToDepositBtn.addEventListener("click", function () {
+            ym(103189463, 'reachGoal', 'click_how_to_deposit');
+        });
+    }
+});
+</script>
+
 </body>
 </html>
