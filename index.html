@@ -3,188 +3,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>🎰 Claim Your Bonus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Bonus Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+            background: #121212;
             color: #fff;
-            margin: 0;
-            padding: 0 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #222;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.7);
-        }
-        h1, h2 {
-            color: #ffcc00;
+            font-family: Arial, sans-serif;
             text-align: center;
+            padding: 20px;
         }
-        p, li {
-            font-size: 16px;
-            line-height: 1.6;
+        .box {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
         }
-        ul {
-            padding-left: 20px;
-        }
-        .lang-section {
-            margin-top: 20px;
-        }
-        .btn-group {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        h1 {
+            color: #ffcc00;
         }
         .btn {
-            display: block;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
+            display: inline-block;
+            background: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 4px;
             font-weight: bold;
             text-decoration: none;
-            transition: background 0.3s;
         }
-        .stake {
-            background-color: #4caf50;
-            color: #fff;
-        }
-        .fortuna {
-            background-color: #f44336;
-            color: #fff;
-        }
-        .btn:hover {
-            opacity: 0.9;
-        }
-        .info-box {
-            background-color: #333;
-            padding: 15px;
-            border-radius: 8px;
+        .lang {
             margin-top: 20px;
         }
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            text-align: center;
-            color: #888;
+        .lang button {
+            margin: 3px;
+            padding: 5px 10px;
+        }
+        .crypto-block {
+            margin-top: 25px;
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .crypto-block a {
+            color: #ffcc00;
+            display: inline-block;
+            margin: 5px 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>💸 Choose Your Bonus and Start Winning!</h1>
+    <h1 id="title">🎁 Claim Your Bonus Now!</h1>
+    <div class="box" id="main-content">
+        <p id="steps">1. Click the casino button below<br>2. Register an account<br>3. Make a deposit and get your bonus</p>
+        <a href="https://stake.com/?c=c16bac6b4c" class="btn" id="stake">Go to Stake</a><br>
+        <a href="https://fortuna-promo.com/alt/pf_wheel_of_fortune_ladies_ru/?3a83a38175facdf799b1d0c9beebcac5" class="btn" id="fortuna">Go to PlayFortuna</a>
 
-        <div class="info-box">
-            <h2>✅ How to Get Your Bonus</h2>
-            <ol>
-                <li>Click the casino button below</li>
-                <li>Register an account</li>
-                <li>Make a deposit and claim your bonus</li>
+        <div class="crypto-block" id="crypto">
+            <p id="nocrypto">💡 No crypto? Here's how to deposit:</p>
+            <ol id="cryptosteps">
+                <li>Register on a crypto exchange</li>
+                <li>Buy crypto with your card</li>
+                <li>Transfer to the casino</li>
             </ol>
-        </div>
-
-        <div class="info-box">
-            <h2>🚀 Don’t Miss Out</h2>
-            <p>Bonus up to $500 + Free Spins!</p>
-            <p>Slots, Sports & Poker — Play Your Way.</p>
-            <p>Take the first step 👇</p>
-        </div>
-
-        <div class="info-box">
-            <h2>🧩 No Crypto?</h2>
-            <p>No problem — find out how to deposit with a card 💳</p>
-            <a href="#" class="btn" style="background:#2196F3;">How to Deposit?</a>
-        </div>
-
-        
-<div class="info-box">
-    <h2>⏳ Limited Time Offer!</h2>
-    <p>Hurry up! Bonuses are available only for a short time.</p>
-    <p><strong>Time Left:</strong></p>
-    <div id="countdown" style="font-size: 22px; color: #ffcc00; margin-top: 10px;"></div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var countDownDate = new Date("2025-07-11T22:45:25.510118Z").getTime();
-    var countdown = document.getElementById("countdown");
-
-    var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        if (distance < 0) {
-            clearInterval(x);
-            countdown.innerHTML = "EXPIRED";
-            return;
-        }
-
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdown.innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
-    }, 1000);
-});
-</script>
-<div class="btn-group">
-            <a href="https://stake.com/?c=c16bac6b4c" class="btn stake">🔵 Play on Stake</a>
-            <a href="https://fortuna-promo.com/alt/pf_wheel_of_fortune_ladies_ru/?3a83a38175facdf799b1d0c9beebcac5" class="btn fortuna">🔴 Play on PlayFortuna</a>
-        </div>
-
-        <div class="footer">
-            ⓒ 2025 Promo Landing Page — Stake & PlayFortuna
+            <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_005FXA4OM1" target="_blank">Register on Binance</a>
+            <a href="https://www.bybit.com/invite?ref=ZY974Q" target="_blank">Register on Bybit</a>
         </div>
     </div>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <div class="lang">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+        <button onclick="setLanguage('pt')">Português</button>
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('tr')">Türkçe</button>
+    </div>
 
-    ym(103189463, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103189463" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <script>
+        const content = {
+            en: {
+                title: "🎁 Claim Your Bonus Now!",
+                steps: "1. Click the casino button below<br>2. Register an account<br>3. Make a deposit and get your bonus",
+                stake: "Go to Stake",
+                fortuna: "Go to PlayFortuna",
+                nocrypto: "💡 No crypto? Here's how to deposit:",
+                cryptosteps: ["Register on a crypto exchange", "Buy crypto with your card", "Transfer to the casino"]
+            },
+            ru: {
+                title: "🎁 Получи свой бонус!",
+                steps: "1. Нажми кнопку ниже<br>2. Зарегистрируйся<br>3. Сделай депозит и получи бонус",
+                stake: "Перейти в Stake",
+                fortuna: "Перейти в PlayFortuna",
+                nocrypto: "💡 Нет крипты? Вот как пополнить:",
+                cryptosteps: ["Зарегистрируйся на бирже", "Купи крипту с карты", "Переведи в казино"]
+            },
+            pt: {
+                title: "🎁 Receba seu bônus agora!",
+                steps: "1. Clique no botão do cassino abaixo<br>2. Cadastre-se<br>3. Deposite e receba o bônus",
+                stake: "Ir para Stake",
+                fortuna: "Ir para PlayFortuna",
+                nocrypto: "💡 Sem cripto? Veja como depositar:",
+                cryptosteps: ["Cadastre-se em uma exchange", "Compre cripto com cartão", "Transfira para o cassino"]
+            },
+            es: {
+                title: "🎁 ¡Reclama tu bono ahora!",
+                steps: "1. Haz clic en el botón del casino<br>2. Regístrate<br>3. Deposita y recibe tu bono",
+                stake: "Ir a Stake",
+                fortuna: "Ir a PlayFortuna",
+                nocrypto: "💡 ¿Sin cripto? Así se deposita:",
+                cryptosteps: ["Regístrate en un exchange", "Compra cripto con tarjeta", "Transfiere al casino"]
+            },
+            tr: {
+                title: "🎁 Bonusunu Hemen Al!",
+                steps: "1. Aşağıdaki casino butonuna tıkla<br>2. Kayıt ol<br>3. Para yatır ve bonus al",
+                stake: "Stake'e Git",
+                fortuna: "PlayFortuna'ya Git",
+                nocrypto: "💡 Kripto yok mu? İşte nasıl yatırılır:",
+                cryptosteps: ["Bir borsaya kaydol", "Kartla kripto satın al", "Kumarhaneye aktar"]
+            }
+        };
 
+        function setLanguage(lang) {
+            document.getElementById("title").innerHTML = content[lang].title;
+            document.getElementById("steps").innerHTML = content[lang].steps;
+            document.getElementById("stake").innerText = content[lang].stake;
+            document.getElementById("fortuna").innerText = content[lang].fortuna;
+            document.getElementById("nocrypto").innerText = content[lang].nocrypto;
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const stakeBtn = document.querySelector(".btn.stake");
-    const fortunaBtn = document.querySelector(".btn.fortuna");
-    const howToDepositBtn = document.querySelector("a[href='#']");
-
-    if (stakeBtn) {
-        stakeBtn.addEventListener("click", function () {
-            ym(103189463, 'reachGoal', 'click_stake');
-        });
-    }
-
-    if (fortunaBtn) {
-        fortunaBtn.addEventListener("click", function () {
-            ym(103189463, 'reachGoal', 'click_fortuna');
-        });
-    }
-
-    if (howToDepositBtn) {
-        howToDepositBtn.addEventListener("click", function () {
-            ym(103189463, 'reachGoal', 'click_how_to_deposit');
-        });
-    }
-});
-</script>
-
+            let steps = content[lang].cryptosteps;
+            let list = document.getElementById("cryptosteps");
+            list.innerHTML = "";
+            for (let step of steps) {
+                let li = document.createElement("li");
+                li.textContent = step;
+                list.appendChild(li);
+            }
+        }
+    </script>
 </body>
 </html>
